@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilderness Camping Tours | Raja Tours Odisha</title>
+    <style>
+        :root {
+            --primary: #1a6dcc;
+            --primary-dark: #0d4d99;
+            --secondary: #ff9800;
+            --secondary-dark: #e68900;
+            --nature-green: #2e7d32;
+            --earth-brown: #5d4037;
+            --dark: #222;
+            --light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: rgba(42, 92, 42, 0.95);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .camping-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1504851149312-7a075b496cc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+            height: 80vh;
+            min-height: 600px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .camping-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .camping-hero .subtitle {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .camping-tag {
+            background: var(--nature-green);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 2px solid var(--secondary);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        .btn:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+        }
+
+        .btn-nature {
+            background: var(--nature-green);
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+        }
+
+        .btn-nature:hover {
+            background: #1b5e20;
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--nature-green);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+
+        /* Camping Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid var(--nature-green);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--nature-green);
+        }
+
+        /* Camping Locations */
+        .locations-container {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .location-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .location-tab {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .location-tab.active {
+            background: var(--nature-green);
+            color: white;
+            border-color: var(--nature-green);
+        }
+
+        .location-tab:hover:not(.active) {
+            border-color: var(--nature-green);
+            color: var(--nature-green);
+        }
+
+        .location-content {
+            display: none;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .location-hero {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .location-overlay {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .location-details {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .camping-highlights li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .camping-highlights li:before {
+            content: '🏕️';
+            position: absolute;
+            left: 0;
+        }
+
+        /* Camping Packages */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .package-card:hover {
+            border-color: var(--nature-green);
+            transform: translateY(-5px);
+        }
+
+        .package-badge {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .package-header {
+            padding: 25px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+        }
+
+        .package-body {
+            padding: 25px;
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .package-features li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .package-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--nature-green);
+            font-weight: bold;
+        }
+
+        .package-price {
+            font-size: 1.8rem;
+            color: var(--nature-green);
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* Camping Equipment */
+        .equipment-section {
+            background-color: #f8f9fa;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .equipment-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .equipment-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Safety Info */
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .safety-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--nature-green);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background-color: #f8f9fa;
+        }
+        
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 10px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn.active {
+            background: var(--nature-green);
+            color: white;
+            border-color: var(--nature-green);
+        }
+        
+        .filter-btn:hover:not(.active) {
+            border-color: var(--nature-green);
+            color: var(--nature-green);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 250px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-caption {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .gallery-location {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .lightbox-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            border-radius: 10px;
+        }
+        
+        .lightbox-caption {
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .lightbox-close, .lightbox-prev, .lightbox-next {
+            position: absolute;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        
+        .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .lightbox-close {
+            top: -60px;
+            right: 0;
+        }
+        
+        .lightbox-prev {
+            left: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .lightbox-next {
+            right: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        @media (max-width: 768px) {
+            .lightbox-prev, .lightbox-next {
+                left: 10px;
+                right: auto;
+                top: auto;
+                bottom: 10px;
+                transform: none;
+            }
+            
+            .lightbox-next {
+                left: 70px;
+            }
+            
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--nature-green);
+            outline: none;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+.copyright{
+    background-color: #222;
+    margin-top: 20px;
+}
+        /* Responsive */
+        @media (max-width: 992px) {
+            .camping-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .location-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--nature-green);
+                flex-direction: column;
+                padding: 20px 0;
+                text-align: center;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .camping-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .camping-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 50px 0;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Raja<span>Camping</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#locations">Camping Locations</a></li>
+                <li><a href="#packages">Camping Packages</a></li>
+                <li><a href="#equipment">Equipment</a></li>
+                <li><a href="#safety">Safety</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="camping-hero">
+        <div class="camping-tag">Wilderness Adventures Await</div>
+        <h1>Wilderness Camping Tours</h1>
+        <p class="subtitle">Sleep under the stars at Odisha's most spectacular locations with Raja Tours camping experiences</p>
+        <a href="#locations" class="btn btn-nature">Explore Camping Sites</a>
+    </div>
+
+    <!-- Features Section -->
+    <section class="container">
+        <h2 class="section-title">Why Camp with Raja Tours?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🏕️</div>
+                <h3>Premium Camping Gear</h3>
+                <p>High-quality tents, sleeping bags, and camping equipment provided</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍🍳</div>
+                <h3>Campfire Cooking</h3>
+                <p>Delicious meals prepared on-site with local ingredients</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Safety First</h3>
+                <p>Trained guides, first aid, and emergency protocols</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌌</div>
+                <h3>Starry Nights</h3>
+                <p>Remote locations with minimal light pollution for astronomy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Camping Locations -->
+    <section id="locations" class="locations-container">
+        <div class="container">
+            <h2 class="section-title">Our Camping Locations</h2>
+            <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                From mountain peaks to beachfront camps, we offer unique camping experiences across Odisha
+            </p>
+
+            <!-- Location Tabs -->
+            <div class="location-tabs">
+                <div class="location-tab active" data-location="koraput">Koraput Hills</div>
+                <div class="location-tab" data-location="mahendragiri">Mahendragiri Peak</div>
+                <div class="location-tab" data-location="talamali">Talamali Tabletop</div>
+                <div class="location-tab" data-location="keonjhar">Keonjhar Forests</div>
+            </div>
+
+            <!-- Location Content -->
+            <div id="koraput" class="location-content active">
+                <div class="location-hero" style="background-image: url('./assets/cp11.jpg')">
+                    <div class="location-overlay">
+                        <h2 style="font-size: 2.5rem;">Koraput Hill Camping</h2>
+                        <p>Camp amidst the clouds at Odisha's highest regions</p>
+                    </div>
+                </div>
+                <div class="location-details">
+                    <div>
+                        <h3>Camping Experience</h3>
+                        <p>Set up camp near Deomali Peak, Odisha's highest point at 1,672 meters. Experience cool mountain air, panoramic sunrise views, and campfires under starry skies. Perfect for trekkers and nature photographers.</p>
+                        <h4 style="margin-top: 20px;">Best For:</h4>
+                        <p>Trekking, Mountain Views, Photography, Bird Watching</p>
+                    </div>
+                    <div>
+                        <h3>Camping Highlights</h3>
+                        <ul class="camping-highlights">
+                            <li>Base camp at 1,400 meters elevation</li>
+                            <li>Guided sunrise trek to Deomali Peak</li>
+                            <li>Campfire with local tribal storytelling</li>
+                            <li>Visit to nearby Duduma Waterfall</li>
+                            <li>Organic farm-to-table meals</li>
+                            <li>Stargazing with telescope (weather permitting)</li>
+                        </ul>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div id="mahendragiri" class="location-content">
+                <div class="location-hero" style="background-image: url(./assets/cp14.jpg)">
+                    <div class="location-overlay">
+                        <h2 style="font-size: 2.5rem;">Mahendragiri Mountain Camp</h2>
+                        <p>Camp at Odisha's second highest peak with mythological significance</p>
+                    </div>
+                </div>
+                <div class="location-details">
+                    <div>
+                        <h3>Camping Experience</h3>
+                        <p>Set up camp on the slopes of Mahendragiri (1,501 meters), a peak mentioned in the Ramayana. Experience spiritual energy, ancient temples, and breathtaking valley views. The campsite offers both adventure and tranquility.</p>
+                        <h4 style="margin-top: 20px;">Best For:</h4>
+                        <p>Spiritual Retreats, Meditation, Trekking, Mythology Enthusiasts</p>
+                    </div>
+                    <div>
+                        <h3>Camping Highlights</h3>
+                        <ul class="camping-highlights">
+                            <li>Campsite with ancient temple views</li>
+                            <li>Morning meditation sessions</li>
+                            <li>Guided heritage trail to archaeological sites</li>
+                            <li>Rappelling and rock climbing (optional)</li>
+                            <li>Traditional Odia meals cooked on site</li>
+                            <li>Campfire with devotional music</li>
+                        </ul>
+                     
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add similar content blocks for other locations -->
+            <div id="talamali" class="location-content">
+                <!-- Talamali content -->
+                   <div class="location-hero" style="background-image: url('./assets/cp15.avif')">
+                    <div class="location-overlay">
+                        <h2 style="font-size: 2.5rem;">Talamali Mountain Camp</h2>
+                        <p>Camp at Odisha's second highest peak with mythological significance</p>
+                    </div>
+                </div>
+                <div class="location-details">
+                    <div>
+                        <h3>Camping Experience</h3>
+                        <p>Set up camp on the tabletop of Talamali Hills, a scenic highland of southern Odisha. Experience vast green meadows, floating clouds, and panoramic valley views. The campsite offers peaceful surroundings, cool mountain air, and a perfect balance of nature and relaxation.</p>
+                        <h4 style="margin-top: 20px;">Best For:</h4>
+                        <p>Spiritual Retreats, Meditation, Trekking, Mythology Enthusiasts</p>
+                    </div>
+                    <div>
+                        <h3>Camping Highlights</h3>
+                        <ul class="camping-highlights">
+                            <li>Campsite with ancient temple views</li>
+                            <li>Morning meditation sessions</li>
+                            <li>Guided heritage trail to archaeological sites</li>
+                            <li>Rappelling and rock climbing (optional)</li>
+                            <li>Traditional Odia meals cooked on site</li>
+                            <li>Campfire with devotional music</li>
+                        </ul>
+                       
+                    </div>
+                </div>
+            </div>
+            
+          
+            <div id="keonjhar" class="location-content">
+                <!-- Keonjhar content -->
+                   <div class="location-hero" style="background-image: url('./assets/c16.jpg')">
+                    <div class="location-overlay">
+                        <h2 style="font-size: 2.5rem;">Keonjhar Forest Camp</h2>
+                    </div>
+                </div>
+                <div class="location-details">
+                    <div>
+                        <h3>Camping Experience</h3>
+                        <p>Set up camp amidst the dense forests of Keonjhar, a land known for its rich biodiversity and waterfalls. Experience lush greenery, serene forest trails, and the soothing sounds of nature. The campsite offers a calm wilderness atmosphere, fresh forest air, and a perfect blend of adventure and relaxation</p>
+                        <h4 style="margin-top: 20px;">Best For:</h4>
+                        <p>Spiritual Retreats, Meditation, Trekking, Mythology Enthusiasts</p>
+                    </div>
+                    <div>
+                        <h3>Camping Highlights</h3>
+                        <ul class="camping-highlights">
+                            <li>Campsite with ancient temple views</li>
+                            <li>Morning meditation sessions</li>
+                            <li>Guided heritage trail to archaeological sites</li>
+                            <li>Rappelling and rock climbing (optional)</li>
+                            <li>Traditional Odia meals cooked on site</li>
+                            <li>Campfire with devotional music</li>
+                        </ul>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contact" class="btn btn-nature">Book Your Camping Adventure</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Camping Packages -->
+    <section id="packages" class="container">
+        <h2 class="section-title">Camping Packages</h2>
+        <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Choose from our curated camping experiences. All packages include tent accommodation, meals, guide services, and basic camping equipment.
+        </p>
+
+        <div class="packages-grid">
+            <div class="package-card">
+                <div class="package-header">
+                    <h3 style="color: var(--nature-green);">Weekend Camper</h3>
+                    <p>2 Days / 1 Night</p>
+                </div>
+                <div class="package-body">
+                    <p>Perfect for first-time campers or weekend getaways</p>
+                    <ul class="package-features">
+                        <li>Comfortable tent accommodation (2-person)</li>
+                        <li>3 meals (Dinner, Breakfast, Lunch)</li>
+                        <li>Campfire setup with snacks</li>
+                        <li>Basic hiking/trekking guide</li>
+                        <li>Sleeping bags & mats provided</li>
+                        <li>First aid support</li>
+                    </ul>
+                    <div class="package-price">₹2,499 <span style="font-size: 1rem; color: #666;">per person</span></div>
+                    <a href="#contact" class="btn" style="width: 100%; text-align: center;">Book This Package</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-header">
+                    <h3 style="color: var(--nature-green);">Adventure Explorer</h3>
+                    <p>3 Days / 2 Nights</p>
+                </div>
+                <div class="package-body">
+                    <p>For those seeking more adventure and exploration</p>
+                    <ul class="package-features">
+                        <li>All Weekend Camper features</li>
+                        <li>Guided trek to major viewpoints</li>
+                        <li>Night photography session</li>
+                        <li>Local cultural interaction</li>
+                        <li>Basic survival skills workshop</li>
+                        <li>Camping gear rental included</li>
+                    </ul>
+                    <div class="package-price">₹4,999 <span style="font-size: 1rem; color: #666;">per person</span></div>
+                    <a href="#contact" class="btn" style="width: 100%; text-align: center;">Book This Package</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-header">
+                    <h3 style="color: var(--nature-green);">Wilderness Immersion</h3>
+                    <p>5 Days / 4 Nights</p>
+                </div>
+                <div class="package-body">
+                    <p>Complete wilderness experience for serious nature lovers</p>
+                    <ul class="package-features">
+                        <li>All Adventure Explorer features</li>
+                        <li>Multiple location camping</li>
+                        <li>Advanced trekking expeditions</li>
+                        <li>Wildlife spotting sessions</li>
+                        <li>Professional photography guidance</li>
+                        <li>Gourmet camp cooking classes</li>
+                    </ul>
+                    <div class="package-price">₹9,999 <span style="font-size: 1rem; color: #666;">per person</span></div>
+                    <a href="#contact" class="btn" style="width: 100%; text-align: center;">Book This Package</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <p><em>Custom group packages available for families, corporate teams, and student groups. Contact us for special rates!</em></p>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section id="equipment" class="equipment-section">
+        <div class="container">
+            <h2 class="section-title">Camping Equipment Provided</h2>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <span class="equipment-icon">⛺</span>
+                    <h4>Weatherproof Tents</h4>
+                    <p>2-4 person tents with rainfly</p>
+                </div>
+                <div class="equipment-item">
+                    <span class="equipment-icon">🛌</span>
+                    <h4>Sleeping Gear</h4>
+                    <p>Sleeping bags & insulated mats</p>
+                </div>
+               
+                <div class="equipment-item">
+                    <span class="equipment-icon">🍳</span>
+                    <h4>Cooking Gear</h4>
+                    <p>Portable stoves & utensils</p>
+                </div>
+               
+                <div class="equipment-item">
+                    <span class="equipment-icon">🦺</span>
+                    <h4>Safety Gear</h4>
+                    <p>First aid kits & communication</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section id="safety" class="container">
+        <h2 class="section-title">Your Safety is Our Priority</h2>
+        <div class="safety-grid">
+            <div class="safety-card">
+                <h3>🛡️ Trained Guides</h3>
+                <p>All our camping guides are certified in wilderness first aid, CPR, and emergency response. They have extensive knowledge of local terrain and weather patterns.</p>
+            </div>
+            <div class="safety-card">
+                <h3>📡 Communication</h3>
+                <p>Satellite phones and two-way radios available at all campsites. Regular check-ins with base camp. Emergency evacuation plans for each location.</p>
+            </div>
+            <div class="safety-card">
+                <h3>⚕️ Medical Support</h3>
+                <p>Comprehensive first aid kits at all campsites. Nearest medical facilities mapped. Guides trained in handling common wilderness emergencies.</p>
+            </div>
+            <div class="safety-card">
+                <h3>🌦️ Weather Monitoring</h3>
+                <p>Daily weather updates and contingency plans. Campsites chosen for safety from flash floods, landslides, and other natural hazards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section - NEW -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Camping Gallery</h2>
+            <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Explore stunning moments from our camping adventures across Odisha's wilderness
+            </p>
+            
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Locations</button>
+                <button class="filter-btn" data-filter="koraput">Koraput</button>
+                <button class="filter-btn" data-filter="mahendragiri">Mahendragiri</button>
+                <button class="filter-btn" data-filter="beach">Beach Camps</button>
+                <button class="filter-btn" data-filter="forest">Forest Camps</button>
+                <button class="filter-btn" data-filter="campfire">Campfire Moments</button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Image 1 -->
+                <div class="gallery-item" data-category="koraput" data-index="0">
+                    <img src="./assets/cp2.jpeg" alt="Camping in Koraput Hills">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Sunrise at Koraput Hills</div>
+                        <div class="gallery-location">Koraput, Odisha</div>
+                    </div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="gallery-item" data-category="mahendragiri" data-index="1">
+                    <img src="./assets/cp10.webp" alt="Mountain camping at Mahendragiri">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Mountain Camp at Mahendragiri</div>
+                        <div class="gallery-location">Mahendragiri Peak</div>
+                    </div>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="gallery-item" data-category="beach" data-index="2">
+                    <img src="./assets/j9.jpg" alt="Beach camping at Puri">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Beachfront Camping</div>
+                        <div class="gallery-location">Puri, Odisha</div>
+                    </div>
+                </div>
+                
+                <!-- Image 4 -->
+                <div class="gallery-item" data-category="campfire" data-index="3">
+                    <img src="./assets/cp10.webp"Campfire night with group">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Evening Campfire Stories</div>
+                        <div class="gallery-location">Talamali Tabletop</div>
+                    </div>
+                </div>
+                
+                <!-- Image 5 -->
+                <div class="gallery-item" data-category="forest" data-index="4">
+                    <img src="./assets/cp3.jpeg" alt="Forest camping in Keonjhar">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Forest Camp in Keonjhar</div>
+                        <div class="gallery-location">Keonjhar Wildlife Sanctuary</div>
+                    </div>
+                </div>
+                
+                <!-- Image 6 -->
+                <div class="gallery-item" data-category="koraput" data-index="5">
+                    <img src="./assets/cp11.jpg" alt="Trekking in Koraput">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Guided Trek in Koraput</div>
+                        <div class="gallery-location">Koraput Hills</div>
+                    </div>
+                </div>
+                
+                <!-- Image 7 -->
+                <div class="gallery-item" data-category="beach" data-index="6">
+                    <img src="./assets/cp5.jpeg" alt="Sunset at Balasore beach camp">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Sunset at Beach Camp</div>
+                        <div class="gallery-location">Balasore Coast</div>
+                    </div>
+                </div>
+                
+                <!-- Image 8 -->
+                <div class="gallery-item" data-category="campfire" data-index="7">
+                    <img src="https://images.unsplash.com/photo-1506280754576-f6fa8a873550?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cooking at campfire">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Campfire Cooking Session</div>
+                        <div class="gallery-location">Mahendragiri Base Camp</div>
+                    </div>
+                </div>
+                
+                <!-- Image 9 -->
+                <div class="gallery-item" data-category="forest" data-index="8">
+                    <img src="./assets/j13.jpg" alt="Morning in forest camp">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Morning in Forest Camp</div>
+                        <div class="gallery-location">Simlipal Forest Area</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#contact" class="btn btn-nature">Book Your Own Adventure</a>
+            </div>
+        </div>
+        
+        <!-- Lightbox Modal -->
+        <div class="lightbox-modal" id="lightboxModal">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+            <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+            <div class="lightbox-content">
+                <img class="lightbox-img" id="lightboxImage" src="" alt="">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Booking Section -->
+    <section id="contact" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Book Your Camping Adventure</h2>
+            
+            <div class="contact-form">
+                <form id="campingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="participants">Number of Participants *</label>
+                            <input type="number" id="participants" class="form-control" min="1" max="20" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="preferred-location">Preferred Camping Location *</label>
+                            <select id="preferred-location" class="form-control" required>
+                                <option value="">Select a location</option>
+                                <option value="koraput">Koraput Hills</option>
+                                <option value="mahendragiri">Mahendragiri Peak</option>
+                                <option value="talamali">Talamali Tabletop</option>
+                                <option value="puri">Puri & Astaranga Beach Camp</option>
+                                <option value="balasore">Balasore Coastal Camp</option>
+                                <option value="keonjhar">Keonjhar Forest Camp</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="package">Preferred Package *</label>
+                            <select id="package" class="form-control" required>
+                                <option value="">Select a package</option>
+                                <option value="weekend">Weekend Camper (2D/1N)</option>
+                                <option value="adventure">Adventure Explorer (3D/2N)</option>
+                                <option value="wilderness">Wilderness Immersion (5D/4N)</option>
+                                <option value="custom">Custom Package</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dates">Preferred Dates *</label>
+                            <input type="text" id="dates" class="form-control" placeholder="e.g., November 15-17, 2025" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Camping Experience Level *</label>
+                            <select id="experience" class="form-control" required>
+                                <option value="">Select experience level</option>
+                                <option value="first">First-time Camper</option>
+                                <option value="beginner">Beginner (1-5 trips)</option>
+                                <option value="intermediate">Intermediate (5+ trips)</option>
+                                <option value="advanced">Advanced/Experienced</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="requirements">Special Requirements / Dietary Needs</label>
+                        <textarea id="requirements" class="form-control" rows="3" placeholder="Vegetarian/vegan requirements, allergies, medical conditions, etc."></textarea>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px;">
+                        <button type="submit" class="btn btn-nature" style="padding: 15px 50px; font-size: 1.1rem;">
+                            Submit Camping Inquiry
+                        </button>
+                    </div>
+                    
+                    <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #666;">
+                        We'll contact you within 24 hours to confirm availability and discuss details.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">Raja<span>Camping</span></h3>
+                    <p>Specialists in wilderness camping experiences across Odisha. Creating memories under the stars since 2015.</p>
+                    <p style="margin-top: 15px;">🌲 Leave only footprints, take only memories</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Camping Locations</h3>
+                    <ul class="footer-links">
+                        <li><a href="#locations" class="location-link" data-location="koraput">Koraput Hill Camp</a></li>
+                        <li><a href="#locations" class="location-link" data-location="mahendragiri">Mahendragiri Peak</a></li>
+                        <li><a href="#locations" class="location-link" data-location="talamali">Talamali Tabletop</a></li>
+                        <li><a href="#locations" class="location-link" data-location="purias">Puri & Astaranga</a></li>
+                        <li><a href="#locations" class="location-link" data-location="balasore">Balasore Beach Camp</a></li>
+                        <li><a href="#locations" class="location-link" data-location="keonjhar">Keonjhar Forest Camp</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li>📞 Camping Hotline: +91-9876543211</li>
+                        <li>📧 camping@rajatours.com</li>
+                        <li>📍 Base Camp: Raja Tours, Bhubaneswar</li>
+                        <li>⏰ Office Hours: 8AM-8PM Daily</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Follow Our Adventures</h3>
+                    <ul class="footer-links">
+                        <li>📷 Instagram: @RajaCamping</li>
+                        <li>📱 Facebook: /RajaCampingTours</li>
+                        <li>🎥 YouTube: Raja Camping Adventures</li>
+                        <li>📝 Blog: Camping Stories & Tips</li>
+                    </ul>
+                </div>
+            </div> -->
+            
+            <div class="copyright">
+                <p>© 2025 Raja Tours Camping Division. All Rights Reserved. | <a href="index.html" style="color: var(--secondary);">Back to Main Site</a></p>
+                <p style="font-size: 0.8rem; margin-top: 10px;">Practice Leave No Trace principles. Respect nature and local communities.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+        
+        // Location Tabs Functionality
+        document.querySelectorAll('.location-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const locationId = this.getAttribute('data-location');
+                
+                // Update active tab
+                document.querySelectorAll('.location-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update active content
+                document.querySelectorAll('.location-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(locationId).classList.add('active');
+            });
+        });
+        
+        // Footer location links
+        document.querySelectorAll('.location-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const locationId = this.getAttribute('data-location');
+                
+                // Update tabs and content
+                document.querySelectorAll('.location-tab').forEach(tab => {
+                    tab.classList.remove('active');
+                    if(tab.getAttribute('data-location') === locationId) {
+                        tab.classList.add('active');
+                    }
+                });
+                
+                document.querySelectorAll('.location-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(locationId).classList.add('active');
+                
+                // Scroll to locations section
+                document.getElementById('locations').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        // Form Submission
+      document.getElementById('campingForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const participants = document.getElementById('participants').value;
+    const location = document.getElementById('preferred-location').value;
+    const packageType = document.getElementById('package').value;
+    const dates = document.getElementById('dates').value;
+    const experience = document.getElementById('experience').value;
+    const requirements = document.getElementById('requirements').value || "None";
+
+    // Convert values to readable names
+    const locationNames = {
+        koraput: 'Koraput Hills',
+        mahendragiri: 'Mahendragiri Peak',
+        talamali: 'Talamali Tabletop',
+        puri: 'Puri & Astaranga Beach Camp',
+        balasore: 'Balasore Coastal Camp',
+        keonjhar: 'Keonjhar Forest Camp'
+    };
+
+    const packageNames = {
+        weekend: 'Weekend Camper (2D/1N)',
+        adventure: 'Adventure Explorer (3D/2N)',
+        wilderness: 'Wilderness Immersion (5D/4N)',
+        custom: 'Custom Package'
+    };
+
+    const experienceNames = {
+        first: 'First-time Camper',
+        beginner: 'Beginner',
+        intermediate: 'Intermediate',
+        advanced: 'Advanced / Experienced'
+    };
+
+    // WhatsApp message
+    const message =
+`🏕️ *Camping Inquiry* 🏕️
+
+👤 Name: ${name}
+📧 Email: ${email}
+📞 Phone: ${phone}
+👥 Participants: ${participants}
+
+📍 Location: ${locationNames[location]}
+📦 Package: ${packageNames[packageType]}
+📅 Preferred Dates: ${dates}
+🎯 Experience Level: ${experienceNames[experience]}
+
+📝 Special Requirements:
+${requirements}`;
+
+    // WhatsApp number (change if needed)
+    const whatsappNumber = "918249171822";
+
+    // Open WhatsApp
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+
+    // Optional: reset form
+    this.reset();
+});
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('index.html')) return;
+                
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Gallery Filter Functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active filter button
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                
+                // Show/hide gallery items based on filter
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Lightbox Functionality
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        
+        let currentImageIndex = 0;
+        const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+        const totalImages = galleryItems.length;
+        
+        // Open lightbox when clicking on gallery item
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                currentImageIndex = parseInt(this.getAttribute('data-index'));
+                updateLightbox();
+                lightboxModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+        
+        // Close lightbox
+        lightboxClose.addEventListener('click', function() {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+        
+        // Close lightbox when clicking outside the image
+        lightboxModal.addEventListener('click', function(e) {
+            if (e.target === lightboxModal) {
+                lightboxModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Previous image
+        lightboxPrev.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+            updateLightbox();
+        });
+        
+        // Next image
+        lightboxNext.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex + 1) % totalImages;
+            updateLightbox();
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (!lightboxModal.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                lightboxModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            } else if (e.key === 'ArrowLeft') {
+                currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+                updateLightbox();
+            } else if (e.key === 'ArrowRight') {
+                currentImageIndex = (currentImageIndex + 1) % totalImages;
+                updateLightbox();
+            }
+        });
+        
+        // Update lightbox content
+        function updateLightbox() {
+            const activeItem = galleryItems[currentImageIndex];
+            const imgSrc = activeItem.querySelector('img').getAttribute('src');
+            const caption = activeItem.querySelector('.gallery-caption').textContent;
+            const location = activeItem.querySelector('.gallery-location').textContent;
+            
+            lightboxImage.setAttribute('src', imgSrc);
+            lightboxCaption.textContent = `${caption} - ${location}`;
+        }
+        
+        // Add some sample data for other locations (in a real site, this would be full content)
+        const locationContents = {
+            'talamali': {
+                title: 'Talamali Tabletop Camp',
+                description: 'Camp on the picturesque tabletop mountain with 360-degree views',
+                highlights: [
+                    'Exclusive campsite on flat mountain top',
+                    'Panoramic sunrise and sunset viewing',
+                    'Easy to moderate hiking trails',
+                    'Bird watching paradise',
+                    'Minimal light pollution for stargazing',
+                    'Photography workshops available'
+                ],
+                badges: ['Season: Oct-Apr', 'Difficulty: Easy', 'Altitude: 900m']
+            },
+            'purias': {
+                title: 'Puri & Astaranga Beach Camp',
+                description: 'Beachfront camping with ocean views and coastal experiences',
+                highlights: [
+                    'Beachfront tent setup',
+                    'Sunset viewing at Astaranga',
+                    'Beach bonfire with seafood barbecue',
+                    'Morning beach yoga sessions',
+                    'Turtle nesting observation (seasonal)',
+                    'Visit to local fishing villages'
+                ],
+                badges: ['Season: Nov-Feb', 'Difficulty: Easy', 'Beachfront']
+            },
+            'balasore': {
+                title: 'Balasore Coastal Camp',
+                description: 'Unique camping experience with disappearing sea phenomenon',
+                highlights: [
+                    'Camp near Chandipur Beach',
+                    'Witness vanishing sea phenomenon',
+                    'Beachcombing during low tide',
+                    'Coastal wildlife observation',
+                    'Visit to nearby lighthouse',
+                    'Fresh seafood meals'
+                ],
+                badges: ['Season: Oct-Mar', 'Difficulty: Easy', 'Coastal']
+            },
+            'keonjhar': {
+                title: 'Keonjhar Forest Camp',
+                description: 'Jungle camping experience in the rich forests of Keonjhar',
+                highlights: [
+                    'Deep forest camping experience',
+                    'Jungle safari opportunities',
+                    'Waterfall visits and river camping',
+                    'Tribal village interactions',
+                    'Wildlife tracking and bird watching',
+                    'Night jungle walks (with guides)'
+                ],
+                badges: ['Season: Nov-Apr', 'Difficulty: Moderate', 'Forest']
+            }
+        };
+    </script>
+</body>
+</html>
